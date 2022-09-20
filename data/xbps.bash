@@ -80,7 +80,7 @@ _xbps_complete() {
 			fi
 			;;
 		xbps-install)
-			if [[ $prev != -@($morecommon) ]]; then
+			if [[ $prev != -@($morecommon|R|-repository) ]]; then
 				_xbps_all_reply $cur
 				return
 			fi
